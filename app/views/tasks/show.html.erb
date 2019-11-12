@@ -1,15 +1,14 @@
 <h1><%= @task.title%></h1>
 
-<h3><%= @task.details%></h3>
+<h5><%= @task.details%></h5>
 
-<h3>
+<p>
      <%if @task.completed %>
         <%="☑︎ The task is completed" %>
     <%else %>
         <%="□ The task is not completed yet" %>
     <%end %>
-</h3>
+</p>
 
-<%= link_to 'Edit this task', edit_task_path%>
-
-<%= link_to 'back to list', tasks_path%>
+<%= link_to 'Edit this task', edit_task_path, class: 'btn btn-primary m-3 p-2' %>
+<%= link_to 'back to list', tasks_path, class: 'btn btn-success m-3 p-2' %>
